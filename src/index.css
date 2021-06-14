@@ -1,13 +1,955 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+body, html{
+  width: 100vw;
+  height: 100vh;
+}
+
+.Home{
+  background-color: #1e1e1e;
+  background-image: url(./img/cool.jpg);
+  background-blend-mode: overlay;
+  background-position: bottom;
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  
+}
+
+
+ 
+  
+  
+ 
+
+
+/******** NAVBAR STYLES *******/
+
+/*** navigation--------------------------------------*/
+
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: .5rem;
+  font-weight: bold  ;
+}
+
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  list-style: none;
+}
+
+.navbar-links a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: .5em 1rem;
+}
+
+.navbar-links a:hover {
+  border-bottom: 2px solid white;
+  transform: scale(1.1);
+  color:#fffaf1;
+  cursor: pointer;
+  
+}
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.contact__footer{
+  color:#4c4c4c;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .toggle-button {
+      display: flex;
+  }
+
+  .navbar-links {
+      display: none;
+      width: 100%;
+  }
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links ul a {
+      text-align: center;
+  }
+
+  .navbar-links ul a {
+      padding: .5rem 1rem;
+      margin-left: auto;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+}
+
+
+
+
+
+
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 70vh;
+  text-align: center;
+
+}
+
+
+
+.logo{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+    font-size: 1.5em;
+    color: wheat;
+    font-weight: bold;
+    
+}
+
+.title__name{
+  font-size: 4em;
+  font-weight: bold;
+  color: wheat;
+  z-index: 1;
+}
+
+
+
+
+.main__text{
+  font-size: 1.25em;
+  color:#b5b5b5;
+  text-align: center;
+}
+
+.homebtn{
+  padding: .5em;
+  margin-top: 3em;
+  z-index: 1;
+ 
+  
+ 
+}
+
+.homebtn__style{
+  height: 4em;
+  width: 20em;
+   background: linear-gradient(90deg, rgba(208,118,0,1) 0%, rgba(255,248,94,1) 100%);
+   border:none;
+   border-radius: 5px;
+}
+
+
+
+
+/************************** TOKEN SALE PAGE *********/
+.TokenSale{
+  background-color: #030307;
+  background-image: url(./img/building.jpg);
+  background-blend-mode: color-burn;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+
+
+
+
+.toktn{
+  display: flex;
+  flex-direction: column;
+}
+
+.TokenSale__Head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  color:white;
+  font-weight: bold;
+  margin: .5em;
+
+}
+
+
+.TokenSale__bar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2.5em;
+
+}
+
+.TokenSale__bar > div{
+  display: flex;
+  flex-direction: row;
+ ;
+  
+}
+
+progress[value]::-webkit-progress-bar{
+  background-color:linear-gradient(90deg, rgba(255, 0, 0, 0.2)0%, rgba(255, 139, 0, 0.24)62%);
+  border-radius: .4em;
+  
+}
+
+progress[value]::-webkit-progress-value{
+  background-color:linear-gradient(90deg, rgba(255, 0, 0, 0.2)0%, rgba(255, 139, 0, 0.24)62%);;
+}
+
+progress{
+  appearance: none;
+}
+
+.pro{
+  width: 10em;
+  height: 1.5em;
+  margin: .5em;
+  background: linear-gradient(90deg, rgba(208,118,0,1) 0%, rgba(255,248,94,1) 100%);
+  border-radius: 10px;
+}
+
+.pro2{
+  width: 7em;
+  height: 1.5em;
+  margin: .5em;
+  background: linear-gradient(90deg, rgba(0,179,226,1) 0%, rgba(255,248,94,1) 100%);
+  border-radius: 10px;
+}
+
+.pro3{
+  width: 4em;
+  height: 1.5em;
+  margin: .5em;
+  background: linear-gradient(90deg, rgba(169,0,210,1) 0%, rgba(255,248,94,1) 100%);
+  border-radius: 10px;
+}
+
+.token{
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.token__txt{
+  font-size: 1.2em;
+  margin-left:  .5em ;
+  padding:.2em;
+  font-weight: bold;
+  margin-top: -.5em;
+  display: flex;
+  align-self: center;
+  color: white;
+ 
+}
+
+.akita{
+  width: 250px;
+  height: 250px;
+  
+}
+
+.token__graph{
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
+
+pre{
+  font-size: .7em;
+  margin-top: .4em;
+  padding: 0;
+  color: #b5b5b5;
+}
+
+.tokenSale__Price{
+  font-size: 1.3em;
+  margin-left: .3em;
+  font-weight: bold;
+  color: red;
+}
+
+
+/***************Road map***************/
+.roadmap{
+  background: linear-gradient(0deg, rgba(30,30,30,1) 41%, rgba(76,76,76,1) 100%);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.map{
+  width: 100%;
+  height: auto;
+  
+
+}
+
+.roadmap__txt{
+  font-size: 3em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5em;
+  color: #fffaf1;;
+}
+
+
+
+/*** Contact Page******************/
+.contact{
+  width: 100vw;
+  height: 100vh;
+  background-color:#030307;
+    background-image: url(./img/building.jpg);
+    background-position: bottom;
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ball{
+  width: 20em;
+  height: 20em;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgba(30,30,30,1) 1%, rgba(76,76,76,1) 56%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .5;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+input[type=text]{
+  height: 2em;
+  width: 18em;
+  margin: .3em 1em 1em 1em;
+  border:none;
+}
+
+.textarea{
+  height: 7em;
+  width: 18em;
+  margin: 1em;
+  border: none;
+}
+
+label{
+  margin: 0 1em 0 1em;
+  font-size: .7em;
+  color: #fffaf1;
+}
+
+.contact__txt--contact{
+  display: flex;
+  font-size: 3em;
+  align-items: center;
+  height: 25%;
+  color: white;
+  font-weight: bold;
+}
+
+.contact__txt--us{
+  display: flex;
+  font-size: 3em;
+  align-items: center;
+  height: 25%;
+  color: white;
+  font-weight: bold;
+}
+
+.contact--btn{
+  background: linear-gradient(90deg, rgba(208,118,0,1) 0%, rgba(255,248,94,1) 100%);
+  height: 2em;
+  border: none;
+  border-radius: 5px;
+  margin: 1em;
+  font-weight: bold;
+}
+
+/********************************* TABLET DEVICES ****************************************************************************/
+@media screen and (min-width:767px) and (max-width:1024px){
+
+  /************************** TOKEN SALE PAGE *********/
+.TokenSale{
+  background-color:#030307;
+    background-image: url(./img/building.jpg);
+    background-position: bottom;
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+ 
+  
+}
+
+hr{
+  width: 20%;
+}
+
+
+.hr{
+  text-align: center;
+}
+
+
+
+.TokenSale__Head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  color:#4c4c4c;
+  font-weight: bold;
+  margin: .5em;
+
+}
+
+
+.TokenSale__bar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2.5em;
+
+}
+
+.TokenSale__bar > div{
+  display: flex;
+  flex-direction: row;
+ ;
+  
+}
+
+progress[value]::-webkit-progress-bar{
+  background-color:linear-gradient(90deg, rgba(255, 0, 0, 0.2)0%, rgba(255, 139, 0, 0.24)62%);
+  border-radius: .4em;
+  
+}
+
+progress[value]::-webkit-progress-value{
+  background-color:linear-gradient(90deg, rgba(255, 0, 0, 0.2)0%, rgba(255, 139, 0, 0.24)62%);;
+}
+
+progress{
+  appearance: none;
+}
+
+.pro{
+  width: 20em;
+  height: 1.5em;
+  margin: 1em;
+  background: linear-gradient(90deg, rgba(208,118,0,1) 0%, rgba(255,248,94,1) 100%);
+  border-radius: 10px;
+}
+
+.pro2{
+  width: 18em;
+  height: 1.5em;
+  margin: 1em;
+  background: linear-gradient(90deg, rgba(0,179,226,1) 0%, rgba(255,248,94,1) 100%);
+  border-radius: 10px;
+}
+
+.pro3{
+  width: 12em;
+  height: 1.5em;
+  margin: 1em;
+  background: linear-gradient(90deg, rgba(169,0,210,1) 0%, rgba(255,248,94,1) 100%);
+  border-radius: 10px;
+}
+
+.token{
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.token__txt{
+  font-size: 2em;
+  margin-left:  .5em ;
+  padding:.2em;
+  font-weight: bold;
+  margin-top: -.5em;
+  display: flex;
+  align-self: center;
+  color: #4c4c4c;
+ 
+}
+
+.akita{
+  width: 350px;
+  height: 350px;
+  
+}
+
+.token__graph{
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
+
+.token__txt > pre{
+  font-size: .7em;
+  margin-top: .4em;
+  padding: 0;
+  color: #b5b5b5;
+}
+
+.tokenSale__Price{
+  font-size: 2em;
+  margin-left: .3em;
+  font-weight: bold;
+  color: red;
+}
+
+
+
+/*** Contact Page******************/
+.contact{
+  width: 100vw;
+  height: 100vh;
+  background-color:#030307;
+  background-image: url(./img/building.jpg);
+  background-position: bottom;
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ball{
+  width: 30em;
+  height: 30em;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgba(30,30,30,1) 1%, rgba(76,76,76,1) 56%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .5;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+input[type=text]{
+  height: 3em;
+  width: 25em;
+  margin: .3em 1em 1em 1em;
+  border:none;
+  border-radius: 5px;
+}
+
+.textarea{
+  height: 10em;
+  width: 25em;
+  margin: 1em;
+  border: none;
+  border-radius: 5px;
+}
+
+label{
+  margin: 0 1em 0 1em;
+  font-size: .7em;
+  color: #fffaf1;
+}
+
+.contact__txt--contact{
+  display: flex;
+  font-size: 3em;
+  align-items: center;
+  height: 25%;
+  color: white;
+  font-weight: bold;
+}
+
+.contact__txt--us{
+  display: flex;
+  font-size: 3em;
+  align-items: center;
+  height: 25%;
+  color: white;
+  font-weight: bold;
+}
+
+.contact--btn{
+  background: linear-gradient(90deg, rgba(208,118,0,1) 0%, rgba(255,248,94,1) 100%);
+  height: 2em;
+  border: none;
+  border-radius: 5px;
+  font-size: .5em;
+}
+
+
+  
+}
+
+
+/********************************* LAPTOP SCREENS ***************************************/
+@media  screen and (min-width:1025px) {
+  .TokenSale{
+    background-color:#030307;
+    background-image: url(./img/building.jpg);
+    background-position: bottom;
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+ 
+  }
+  
+  hr{
+    width: 20%;
+  }
+  
+  
+  .hr{
+    text-align: center;
+  }
+  
+ 
+  
+  .TokenSale__Head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color:white;
+    font-weight: bold;
+    margin: .5em;
+  
+  }
+  
+  
+  .TokenSale__bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2em;
+  
+  }
+  
+  .TokenSale__bar > div{
+    display: flex;
+    flex-direction: row;
+   ;
+    
+  }
+  
+  progress[value]::-webkit-progress-bar{
+    background-color:linear-gradient(90deg, rgba(255, 0, 0, 0.2)0%, rgba(255, 139, 0, 0.24)62%);
+    border-radius: .4em;
+    
+  }
+  
+  progress[value]::-webkit-progress-value{
+    background-color:linear-gradient(90deg, rgba(255, 0, 0, 0.2)0%, rgba(255, 139, 0, 0.24)62%);;
+  }
+  
+  progress{
+    appearance: none;
+  }
+  
+  .pro{
+    width: 20em;
+    height: 1.5em;
+    margin: 1em;
+    background: linear-gradient(90deg, rgba(208,118,0,1) 0%, rgba(255,248,94,1) 100%);
+    border-radius: 10px;
+  }
+  
+  .pro2{
+    width: 17em;
+    height: 1.5em;
+    margin: 1em;
+    background: linear-gradient(90deg, rgba(0,179,226,1) 0%, rgba(255,248,94,1) 100%);
+    border-radius: 10px;
+  }
+  
+  .pro3{
+    width: 14em;
+    height: 1.5em;
+    margin: 1em;
+    background: linear-gradient(90deg, rgba(169,0,210,1) 0%, rgba(255,248,94,1) 100%);
+    border-radius: 10px;
+  }
+  
+  .token{
+    display: flex;
+    flex-direction: row;
+   
+   
+  }
+  
+  .token__txt{
+    font-size: 2.5em;
+    margin-left:  .5em ;
+    padding:.2em;
+    font-weight: bold;
+    margin-top: -.5em;
+    display: flex;
+    align-self: center;
+    color: white
+   
+  }
+  
+  .akita{
+    width: 400px;
+    height: 400px;
+    margin-right: 7em;
+    
+  }
+  
+  .token__graph{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+  }
+  
+  pre{
+    font-size: 1em;
+    margin-top: .5em;
+    padding: 0;
+    color: #b5b5b5;
+    font-weight: 600;
+  }
+  
+  .tokenSale__Price{
+    font-size: 1.5em;
+    margin-left: .3em;
+    font-weight: bold;
+    color: rgb(233, 24, 24);
+  }
+
+
+  /***************Road map***************/
+.roadmap{
+  background: radial-gradient(circle, rgba(30,30,30,1) 0%, rgba(1,1,3,1) 72%);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.map{
+  width: 35%;
+  height: 75%;
+  margin-bottom:5em;
+  
+
+}
+
+.roadmap__txt{
+  font-size: 3em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5em;
+  color: #fffaf1;;
+}
+
+
+
+/*** Contact Page******************/
+.contact{
+  width: 100vw;
+  height: 100vh;
+  background-color:#030307;
+  background-image: url(./img/building.jpg);
+  background-blend-mode: soft-light;
+  display: flex;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+
+.ball{
+  width: 35em;
+  height: 35em;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgba(30,30,30,1) 1%, rgba(76,76,76,1) 56%);
+  background-blend-mode: darken;
+  opacity: .5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+input[type=text]{
+  height: 2em;
+  width: 30em;
+  margin: .3em 1em 1em 1em;
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.textarea{
+  height: 7em;
+  width: 30em;
+  margin: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+label{
+  margin: 0 1em 0 1em;
+  font-size: .7em;
+  color: #fffaf1;
+}
+
+.contact__txt--contact{
+  display: flex;
+  font-size: 3em;
+  align-items: center;
+  height: 25%;
+  color: white;
+  font-weight: bold;
+}
+
+.contact__txt--us{
+  display: flex;
+  font-size: 3em;
+  align-items: center;
+  height: 25%;
+  color: white;
+  font-weight: bold;
+}
+
+.contact--btn{
+  margin: 1em;
+  background: linear-gradient(90deg, rgba(208,118,0,1) 0%, rgba(255,248,94,1) 100%);
+  height: 3em;
+  border: none;
+  border-radius: 5px;
+  font-size: .5;
+}
+
+/********************************************************NAVBAR*************************/
+.nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: auto;
+  padding: 1em;
+  justify-content: space-between;
+  
+}
+
+.nav__links{
+  display: flex;
+  width: 50%;
+  height: 100%;
+  background-color: aliceblue;
+  justify-content: space-around;
+  margin-left: auto;
+}
+
+.nav__links a {
+  text-decoration: none;
+  list-style-type: none;
+  margin-left: auto;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+
+  
 }
